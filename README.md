@@ -56,3 +56,50 @@ Open in Android Studio, let Gradle do its Gradle things, hit run. If it doesn't 
 ---
 
 ## 📂 The Anatomy
+
+app/src/main/
+├── java/com/example/navgraphfragments/
+│ ├── MainActivity.kt # The one true Activity
+│ ├── HomeFragment.kt # Screen 1
+│ ├── SearchFragment.kt # Screen 2 (searches nothing, promises everything)
+│ └── BookmarkFragment.kt # Screen 3
+└── res/
+├── navigation/
+│ └── nav_graph.xml # The actual brain of this operation
+├── menu/
+│ └── bottom_nav_menu.xml
+└── layout/
+├── activity_main.xml
+├── fragment_home.xml
+├── fragment_search.xml
+└── fragment_bookmark.xml
+
+
+---
+
+## ⚠️ Known Quirks
+
+- The search bar is decorative. It will not search. It will judge you for trying.
+- If your icons look weird in the vector asset picker, make sure you're on **Filled**, not whatever cursed "Material Symbols" variant it defaults to.
+- "Elements not declared" warning on the menu XML? Ignore it. It's lying.
+
+---
+
+## 🗺️ Roadmap (lol)
+
+- [ ] Make the search bar actually search
+- [ ] Add a real bookmark list instead of a vibe
+- [ ] Dark mode that doesn't look like an afterthought
+
+---
+
+## 👤 Author
+
+**Shaban Saeed**
+[GitHub](https://github.com/pabloesc1999) — learning Android one slightly over-engineered side project at a time.
+
+---
+
+## 📄 License
+
+MIT. Take it, fork it, just don't blame me when the search bar doesn't search.
